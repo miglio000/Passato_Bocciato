@@ -1,0 +1,29 @@
+﻿<Window x:Class="Passato_BocciatoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Passato_BocciatoWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="YellowGreen" Height="450" Width="800">
+    <Grid>
+        <Label Content="Verifica" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" Background="#FFE01D1D" Width="178" Foreground="#FFFDE815" FontSize="16"/>
+        <Label x:Name="lblCompito1" HorizontalContentAlignment="Center" Content="Compito1:" HorizontalAlignment="Left" Margin="68,146,0,0" VerticalAlignment="Top" Foreground="Black"/>
+        <Label x:Name="lblCompito2" Content="Compito2:" HorizontalAlignment="Left" Margin="68,177,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCompito3" Content="Compito3:" HorizontalAlignment="Left" Margin="68,208,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCompito4" Content="Compito4:" HorizontalAlignment="Left" Margin="68,239,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCompito1" HorizontalAlignment="Left" Height="23" Margin="138,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCompito2" HorizontalAlignment="Left" Height="23" Margin="138,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCompito3" HorizontalAlignment="Left" Height="23" Margin="138,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCompito4" HorizontalAlignment="Left" Height="23" Margin="138,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Media:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="456,143,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="lblMedia" Content="" HorizontalAlignment="Left" Margin="563,146,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label Content="Min:" HorizontalAlignment="Left" Margin="485,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Max:" HorizontalAlignment="Left" Margin="485,213,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMin" Content="" HorizontalAlignment="Left" Margin="563,177,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="lblMax" Content="" HorizontalAlignment="Left" Margin="563,213,0,0" VerticalAlignment="Top" Foreground="White" Background="Black"/>
+        <Label x:Name="lblPromosso_Bocciato" Content="" HorizontalAlignment="Left" Margin="563,335,0,0" VerticalAlignment="Top" Width="120" Height="39" FontSize="22" Foreground="#FF9E0000"/>
+        <Button x:Name="btnButton" Content="Calcola" HorizontalAlignment="Left" Margin="498,282,0,0" VerticalAlignment="Top" Width="75" Background="#FFBF0000" Foreground="#FFF0FB04" FontWeight="Bold" Click="btnButton_Click"/>
+
+    </Grid>
+</Window>
