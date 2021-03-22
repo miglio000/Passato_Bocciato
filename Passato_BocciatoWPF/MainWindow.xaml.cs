@@ -27,28 +27,44 @@ namespace Passato_BocciatoWPF
 
         private void btnButton_Click(object sender, RoutedEventArgs e)
         {
-            float compito1, compito2, compito3, compito4, somma, media;
-            try
+            float compito1, compito2, compito3, compito4, somma, media, min, max;
+            lblPromosso_Bocciato.Content = "";
+            if (txtCompito1.Text != "" && txtCompito2.Text != "" && txtCompito3.Text != "" && txtCompito4.Text != "")
             {
-                compito1 = float.Parse(txtCompito1.Text);
-                compito2 = float.Parse(txtCompito2.Text);
-                compito3 = float.Parse(txtCompito3.Text);
-                compito4 = float.Parse(txtCompito4.Text);
-                if (compito1 >= 2 && compito1 <= 10)
+                try
                 {
-                    if (compito2 >= 2 && compito2 <= 10)
+                    compito1 = float.Parse(txtCompito1.Text);
+                    compito2 = float.Parse(txtCompito2.Text);
+                    compito3 = float.Parse(txtCompito3.Text);
+                    compito4 = float.Parse(txtCompito4.Text);
+                    if (compito1 >= 2 && compito1 <= 10)
                     {
-                        if (compito3 >= 2 && compito3 <= 10)
+                        if (compito2 >= 2 && compito2 <= 10)
                         {
-                            if (compito4 >= 2 && compito4 <= 10)
+                            if (compito3 >= 2 && compito3 <= 10)
                             {
-                                somma = compito1 + compito2 + compito3 + compito4;
-                                media = somma / 4;
-                                lblMedia.Content = media;
-                                if (media >= 6)
-                                    lblPromosso_Bocciato.Content = "Promosso";
+                                if (compito4 >= 2 && compito4 <= 10)
+                                {
+                                    somma = compito1 + compito2 + compito3 + compito4;
+                                    media = somma / 4;
+                                    lblMedia.Content = media;
+                                    min = Math.Min(compito1, Math.Min(compito2, Math.Min(compito3, compito4)));
+                                    max = Math.Max(compito1, Math.Max(compito2, Math.Max(compito3, compito4)));
+                                    lblMin.Content = min;
+                                    lblMax.Content = max;
+
+                                    if (media >= 6)
+                                        lblPromosso_Bocciato.Content = "Promosso";
+                                    else
+                                        lblPromosso_Bocciato.Content = "Bocciato";
+
+                                    lblIncidenzaC1.Content = (compito1 / somma) * 100;
+                                    lblIncidenzaC2.Content = (compito2 / somma) * 100;
+                                    lblIncidenzaC3.Content = (compito3 / somma) * 100;
+                                    lblIncidenzaC4.Content = (compito4 / somma) * 100;
+                                }
                                 else
-                                    lblPromosso_Bocciato.Content = "Bocciato";
+                                    lblMedia.Content = "Voto non valido.";
                             }
                             else
                                 lblMedia.Content = "Voto non valido.";
@@ -58,14 +74,16 @@ namespace Passato_BocciatoWPF
                     }
                     else
                         lblMedia.Content = "Voto non valido.";
+
                 }
-                else
-                    lblMedia.Content = "Voto non valido.";
-                
+                catch (Exception)
+                {
+                    MessageBox.Show("Valore/i non valido/i", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
             }
-            catch(Exception ex)
+            else
             {
-                lblMedia.Content = ex.Message;
+                MessageBox.Show("Inserire dei valori.", "Attention", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
     }

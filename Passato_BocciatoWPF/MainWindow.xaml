@@ -24,6 +24,11 @@
         <Label x:Name="lblMax" Content="" HorizontalAlignment="Left" Margin="563,213,0,0" VerticalAlignment="Top" Foreground="White" Background="Black"/>
         <Label x:Name="lblPromosso_Bocciato" Content="" HorizontalAlignment="Left" Margin="563,335,0,0" VerticalAlignment="Top" Width="120" Height="39" FontSize="22" Foreground="#FF9E0000"/>
         <Button x:Name="btnButton" Content="Calcola" HorizontalAlignment="Left" Margin="498,282,0,0" VerticalAlignment="Top" Width="75" Background="#FFBF0000" Foreground="#FFF0FB04" FontWeight="Bold" Click="btnButton_Click"/>
+        <Label Content="Incidenza %" HorizontalAlignment="Left" Margin="282,73,0,0" VerticalAlignment="Top" Foreground="White" Background="#FFB80000"/>
+        <Label x:Name="lblIncidenzaC1" Content="" HorizontalAlignment="Left" Margin="298,143,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="lblIncidenzaC2" Content="" HorizontalAlignment="Left" Margin="298,177,0,0" VerticalAlignment="Top" Height="23" Background="Black" Foreground="White"/>
+        <Label x:Name="lblIncidenzaC3" Content="" HorizontalAlignment="Left" Margin="298,208,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="lblIncidenzaC4" Content="" HorizontalAlignment="Left" Margin="298,239,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
 
     </Grid>
 </Window>
