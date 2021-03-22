@@ -58,10 +58,10 @@ namespace Passato_BocciatoWPF
                                     else
                                         lblPromosso_Bocciato.Content = "Bocciato";
 
-                                    lblIncidenzaC1.Content = (compito1 / somma) * 100;
-                                    lblIncidenzaC2.Content = (compito2 / somma) * 100;
-                                    lblIncidenzaC3.Content = (compito3 / somma) * 100;
-                                    lblIncidenzaC4.Content = (compito4 / somma) * 100;
+                                    lblIncidenzaC1.Content = Math.Round((compito1 / somma) * 100, 0);
+                                    lblIncidenzaC2.Content = Math.Round((compito2 / somma) * 100, 0);
+                                    lblIncidenzaC3.Content = Math.Round((compito3 / somma) * 100, 0);
+                                    lblIncidenzaC4.Content = Math.Round((compito4 / somma) * 100, 0);
                                 }
                                 else
                                     lblMedia.Content = "Voto non valido.";
